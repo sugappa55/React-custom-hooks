@@ -1,5 +1,11 @@
+import DebouncedInput from "./components/DebouncedInput";
+
 function App() {
-  return <h1 className="text-3xl text-red-600 font-bold">Hello word</h1>;
+  return (
+    <div className=" w-screen h-screen flex justify-center items-center">
+      <DebouncedInput />
+    </div>
+  );
 }
 
 export default App;
