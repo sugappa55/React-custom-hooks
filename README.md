@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Custom React Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a collection of reusable custom React hooks written in TypeScript to simplify and enhance common React functionalities.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Hooks](#hooks)
+  - [useDebounce](#usedebounce)
+  - [useFetch](#usefetch)
+  - [usePrevious](#useprevious)
 
-## Expanding the ESLint configuration
+## Hooks
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. `useDebounce`
 
-- Configure the top-level `parserOptions` property like this:
+The `useDebounce` hook delays updating a value until after a specified delay time.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+#### Parameters:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **`val: T`** - The value to debounce.
+- **`delay: number` (optional)** - The delay in milliseconds before updating the state. Default is `500ms`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+#### Returns:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **`value: T`** - The debounced value.
+
+---
+
+### 2. `useFetch`
+
+The `useFetch` hook is a custom hook for fetching data from a given URL with optional parameters. It provides loading and error states along with the fetched data.
+
+#### Parameters:
+
+- **`url: string`** - The URL to fetch data from.
+- **`params: ParamsType`** - Additional parameters for the API request (e.g., query parameters).
+
+#### Returns:
+
+- **`data: QData | undefined`** - The fetched data.
+- **`loading: boolean`** - Whether the request is still in progress.
+- **`error: { message: string } | undefined`** - Error information, if any.
+
+---
+
+### 3. `usePrevious`
+
+The `usePrevious` hook tracks the previous value of a given state or prop.
+
+#### Parameters:
+
+- **`val: T`** - The value to track.
+
+#### Returns:
+
+- **`previousValue: T | undefined`** - The previous value of the input.
