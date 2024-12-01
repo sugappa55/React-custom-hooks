@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import usePrevious from '../custom-hooks/usePrevious';
 
 const PreviousValue = () => {

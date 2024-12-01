@@ -1,11 +1,13 @@
 // import DebouncedInput from './components/DebouncedInput';
-import PreviousValue from './components/PreviousValue';
+import FetchData from './components/FetchData';
+// import PreviousValue from './components/PreviousValue';
 
 function App() {
   return (
     <div className=' w-screen h-screen flex justify-center items-center'>
       {/* <DebouncedInput /> */}
-      <PreviousValue />
+      {/* <PreviousValue /> */}
+      <FetchData />
     </div>
   );
 }
