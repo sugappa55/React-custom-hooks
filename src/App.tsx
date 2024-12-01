@@ -1,5 +1,6 @@
 // import DebouncedInput from './components/DebouncedInput';
-import FetchData from './components/FetchData';
+// import FetchData from './components/FetchData';
+import UndoRedo from './components/UndoRedo';
 // import PreviousValue from './components/PreviousValue';
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div className=' w-screen h-screen flex justify-center items-center'>
       {/* <DebouncedInput /> */}
       {/* <PreviousValue /> */}
-      <FetchData />
+      {/* <FetchData /> */}
+      <UndoRedo />
     </div>
   );
 }
