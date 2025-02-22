@@ -1,4 +1,4 @@
-import useFetch from '../custom-hooks/useFetch';
+import useFetch from '../custom-hooks/use-fetch';
 
 const params = {
   limit: 5

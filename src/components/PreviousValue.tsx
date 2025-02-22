@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import usePrevious from '../custom-hooks/usePrevious';
+import usePrevious from '../custom-hooks/use-previous';
 
 const PreviousValue = () => {
   const [count, setCount] = useState(0);

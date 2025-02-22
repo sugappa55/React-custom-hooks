@@ -1,5 +1,5 @@
 import { ChangeEvent, useCallback, useState } from 'react';
-import useDebounce from '../custom-hooks/useDebounce';
+import useDebounce from '../custom-hooks/use-debounce';
 import { debounce } from '../utils';
 
 const DebouncedInput = () => {

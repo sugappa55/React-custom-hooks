@@ -1,4 +1,4 @@
-import useUndoRedo from '../custom-hooks/useUndoRedo';
+import useUndoRedo from '../custom-hooks/use-undo-redo';
 
 const UndoRedo = () => {
   const { value, setValue, back, next, history, pointer } = useUndoRedo(0);
